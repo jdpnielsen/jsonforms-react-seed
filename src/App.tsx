@@ -5,7 +5,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import logo from './logo.svg';
 import './App.css';
-import schema from './schema.json';
+import { userSchema } from './schema';
+// import schema from './schema.json';
 import uischema from './uischema.json';
 import {
   materialCells,
@@ -42,11 +43,7 @@ const useStyles = makeStyles((_theme) => ({
 }));
 
 const initialData = {
-  name: 'Send email to Adrian',
-  description: 'Confirm if you have passed the subject\nHereby ...',
-  done: true,
-  recurrence: 'Daily',
-  rating: 3,
+  firstName: 'Joshua',
 };
 
 const renderers = [
@@ -106,7 +103,7 @@ const App = () => {
           </Typography>
           <div className={classes.demoform}>
             <JsonForms
-              schema={schema}
+              schema={userSchema}
               uischema={uischema}
               data={jsonformsData}
               renderers={renderers}

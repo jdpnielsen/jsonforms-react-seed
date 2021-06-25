@@ -2,54 +2,36 @@
   "type": "VerticalLayout",
   "elements": [
     {
-      "type": "Control",
-      "label": "Completed",
-      "scope": "#/properties/done"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/name"
-    },
-    {
       "type": "HorizontalLayout",
       "elements": [
         {
           "type": "Control",
-          "scope": "#/properties/due_date"
+          "scope": "#/properties/firstName"
         },
         {
           "type": "Control",
-          "scope": "#/properties/rating"
-        }
-      ]
-    },
-    {
-      "type": "HorizontalLayout",
-      "elements": [
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence"
-        },
-        {
-          "type": "Control",
-          "scope": "#/properties/recurrence_interval",
-          "rule": {
-            "effect": "HIDE",
-            "condition": {
-              "type": "LEAF",
-              "scope": "#/properties/recurrence",
-              "expectedValue": "Never"
-            }
-          }
+          "scope": "#/properties/lastName"
         }
       ]
     },
     {
       "type": "Control",
-      "scope": "#/properties/description",
+      "scope": "#/properties/email"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/password",
       "options": {
-        "multi": true
+        "input": "password"
       }
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/birthday"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/rating"
     }
   ]
 }
